@@ -15,7 +15,7 @@ int main(void)
 		j = 48;
 		while (j < 58)
 		{
-			k = j;
+			k = i;
 			while (k < 58)
 			{
 				if (i == k)
@@ -24,23 +24,23 @@ int main(void)
 					l = 48;
 				while (l < 58)
 				{
-			putchar(i);
-			putchar(j);
-			putchar(' ');
-			putchar(k);
-			putchar(l);
-			if (i == 57 && j == 56 && k == 57 && l == 57)
-				break;
-			putchar(',');
-			putchar(' ');
-			l++;
+					putchar(i);
+					putchar(j);
+					putchar(' ');
+					putchar(k);
+					putchar(l);
+					if (i == 57 && j == 58 && k == 57 && l == 57)
+						break;
+					putchar(',');
+					putchar(' ');
+					l++;
+				}
+				k++;
+			}
+			j++;
 		}
-		k++;
+		i++;
 	}
-	j++;
-}
-i++;
-}
-putchar('\n');
-return (0);
+	putchar('\n');
+	return (0);
 }
