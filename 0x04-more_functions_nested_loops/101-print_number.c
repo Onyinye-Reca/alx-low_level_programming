@@ -1,34 +1,26 @@
-#include "main.h"
+#include "holberton.h"
 
 /**
  * print_number - prints an integer
- *
- * @n: int to print
- *
- * Return: void
+ * @n: integer to be printed
  */
 void print_number(int n)
 {
-	/* range start from 0 to the upper positive number limit */
-	unsigned int n1, hp;
+	unsigned int n1;
 
-	/* Put '-' for negative values of n */
 	if (n < 0)
 	{
+		n1 = -n;
 		_putchar('-');
-		n *= -1;
-	}
-
-	/* get the highest power for n */
-	n1 = n;
-	hp = 1;
-
-	while (n1 > 9)
+	} else
 	{
-		n1 /= 10;
-		hp *= 10;
+		n1 = n;
 	}
-		
-	for (; hp >= 1; hp /= 10)
-		_putchar(((n / hp) % 10) + '0');
+
+	if (n1 / 10)
+	{
+		print_number(n1 / 10);
+	}
+
+	_putchar((n1 % 10) + '0');
 }
