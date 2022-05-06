@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "min.h"
 
 /**
  * main - copies the content of a file to another file
